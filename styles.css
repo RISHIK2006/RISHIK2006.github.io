@@ -1,21 +1,21 @@
-
+/* Reset some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Apply a global font style */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #60a9ff;
-    color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #2c3e50;
     line-height: 1.6;
 }
 
-
+/* Style the navigation bar */
 .navbar {
-    background-color: #0c0c0c;
+    background-color: #2c3e50;
     overflow: hidden;
     text-align: center;
     padding: 10px 0;
@@ -28,29 +28,41 @@ body {
     padding: 14px 20px;
     text-decoration: none;
     border-radius: 4px;
-  
     margin: 0 5px;
-   
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulse 2s infinite;
 }
 
 .navbar a:hover {
-    background-color: #575757;
+    background-color: #3498db;
     color: white;
+    transform: scale(1.1);
 }
 
-
+/* Container styles */
 .container {
     width: 80%;
     margin: 20px auto;
     padding: 40px;
-    background: #1e1e1e;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-out forwards;
 }
 
-h1,h2{
-    color: #f0f0f0;
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header styles */
+h1,
+h2 {
+    color: #2c3e50;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -59,32 +71,34 @@ h1 {
     margin-top: 20px;
 }
 
+/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-    background: #2a2a2a;
+    background: #f8f8f8;
 }
 
 table,
 th,
 td {
-    border: 1px solid #444;
+    border: 1px solid #dddddd;
 }
 
 th,
 td {
     padding: 12px;
     text-align: left;
-    color: #f0f0f0;
+    color: #2c3e50;
 }
 
 th {
-    background-color: #3a3a3a;
+    background-color: #3498db;
+    color: white;
 }
 
 td a {
-    color: #2196F3;
+    color: #3498db;
     text-decoration: none;
 }
 
@@ -92,13 +106,21 @@ td a:hover {
     text-decoration: underline;
 }
 
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
 
+table tr:hover {
+    background-color: #d1e7f0;
+}
+
+/* Additional styles for the about page */
 .about-section {
     display: flex;
     align-items: center;
     margin-bottom: 30px;
     padding: 20px 0;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid #dddddd;
 }
 
 .about-section img {
@@ -106,6 +128,11 @@ td a:hover {
     width: 150px;
     height: 150px;
     margin-right: 20px;
+    transition: transform 0.3s ease;
+}
+
+.about-section img:hover {
+    transform: scale(1.1);
 }
 
 .about-text {
@@ -119,7 +146,7 @@ td a:hover {
 .about-section .links a {
     display: inline-block;
     margin-right: 10px;
-    color: #2196F3;
+    color: #3498db;
     text-decoration: none;
     font-size: 18px;
 }
@@ -140,7 +167,22 @@ td a:hover {
     margin-top: 30px;
 }
 
+/* Pulse Animation for Navbar */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
 
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive design for smaller screens */
 @media (max-width: 768px) {
     .container {
         width: 100%;
