@@ -1,11 +1,11 @@
-/* Reset some default styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Apply a global font style */
+
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to right, #e0eafc, #cfdef3);
@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Style the navigation bar */
+
 .navbar {
     background-color: #2c3e50;
     overflow: hidden;
@@ -39,7 +39,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Container styles */
+
 .container {
     width: 80%;
     margin: 20px auto;
@@ -59,7 +59,7 @@ body {
     }
 }
 
-/* Header styles */
+
 h1,
 h2 {
     color: #2c3e50;
@@ -71,7 +71,6 @@ h1 {
     margin-top: 20px;
 }
 
-/* Table styles */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -114,7 +113,7 @@ table tr:hover {
     background-color: #d1e7f0;
 }
 
-/* Additional styles for the about page */
+
 .about-section {
     display: flex;
     align-items: center;
@@ -167,7 +166,7 @@ table tr:hover {
     margin-top: 30px;
 }
 
-/* Pulse Animation for Navbar */
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -182,7 +181,7 @@ table tr:hover {
     }
 }
 
-/* Responsive design for smaller screens */
+
 @media (max-width: 768px) {
     .container {
         width: 100%;
